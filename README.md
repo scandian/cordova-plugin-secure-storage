@@ -31,7 +31,7 @@ cordova plugin add cordova-plugin-secure-storage
 or if you want to be running the development version,
 
 ```sh
-cordova plugin add https://github.com/LikeMindNetworks/cordova-plugin-secure-storage.git
+cordova plugin add https://github.com/Scandian/cordova-plugin-secure-storage.git
 ```
 
 ##<a name="plugin_api"></a> Plugin API
