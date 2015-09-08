@@ -1,7 +1,5 @@
 # Forking Note
-- remove the hard coded <uses-sdk> for android
-- convert to the new cordova naming scheme for plugins
-- move to use npm
+- Adding API version check to support API Level 18
 
 # SecureStorage plugin for iOS & Android
 

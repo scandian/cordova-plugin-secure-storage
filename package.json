@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-secure-storage",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "",
   "cordova": {
     "id": "cordova-plugin-secure-storage",
@@ -21,12 +21,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LikeMindNetworks/cordova-plugin-secure-storage.git"
+    "url": "git+https://github.com/Scandian/cordova-plugin-secure-storage.git"
   },
-  "author": "LikeMindNetworks",
+  "author": "Scandian",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/LikeMindNetworks/cordova-plugin-secure-storage/issues"
+    "url": "https://github.com/Scandian/cordova-plugin-secure-storage/issues"
   },
-  "homepage": "https://github.com/LikeMindNetworks/cordova-plugin-secure-storage#readme"
+  "homepage": "https://github.com/Scandian/cordova-plugin-secure-storage#readme"
 }
