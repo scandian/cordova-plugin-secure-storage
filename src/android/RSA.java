@@ -1,6 +1,7 @@
 package com.crypho.plugins;
 
 import android.content.Context;
+import android.os.Build;
 import android.util.Log;
 
 import android.security.KeyPairGeneratorSpec;
@@ -33,16 +34,20 @@ public class RSA {
 		Calendar notAfter = Calendar.getInstance();
 		notAfter.add(Calendar.YEAR, 100);
 		String principalString = String.format("CN=%s, OU=%s", alias, ctx.getPackageName());
-		KeyPairGeneratorSpec spec = new KeyPairGeneratorSpec.Builder(ctx)
+		KeyPairGeneratorSpec.Builder builder = new KeyPairGeneratorSpec.Builder(ctx)
 			.setAlias(alias)
 			.setSubject(new X500Principal(principalString))
 			.setSerialNumber(BigInteger.ONE)
 			.setStartDate(notBefore.getTime())
 			.setEndDate(notAfter.getTime())
-			.setEncryptionRequired()
-			.setKeySize(2048)
-			.setKeyType("RSA")
-			.build();
+			.setEncryptionRequired();
+
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+			builder = builder.setKeySize(2048)
+			.setKeyType("RSA");
+		}
+
+		KeyPairGeneratorSpec spec = builder.build();
 		KeyPairGenerator kpGenerator = KeyPairGenerator.getInstance("RSA", KEYSTORE_PROVIDER);
 		kpGenerator.initialize(spec);
 		kpGenerator.generateKeyPair();
